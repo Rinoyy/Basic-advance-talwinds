@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <title>Document</title>
+</head>
+<body class="font-sans">
+    <div class="example-1">
+         <nav class="bg-blue-100">
+            <div class="flex flex-row flex-wrap justify-between max-w-7xl mx-auto px-4">
+                <div class="py-4">
+                    <span class="text-2xl font-semibold">Navbar</span>  
+                </div>
+                <div data-collapse-toggle="navbar-default" class="md:hidden flex items-center" aria-controls="navbar-default" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars text-2xl"></i> 
+                </div>
+                <div class="hidden h-[100vh] w-full md:block md:w-auto" id="navbar-default">                    
+                    <ul class="flex text-lg flex-col p-2mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        <li class="py-2 ">Service</li>
+                        <li class="py-2">Projects</li>
+                        <li class="py-2">Question</li>
+                    </ul>
+                </div>
+            </div>
+         </nav>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        function toggleMenu(){
+            const menu = $("#navbar-default");
+            menu.slideToggle('hidden');
+        }
+    </script>
+</body>
+</html>
