@@ -31,7 +31,7 @@
     </div>
 
     <div class="row" style="background-color: #38245c">
-      <div class="grid grid-cols-4 max-w-7xl mx-auto mt-5 gap-3 bg-tra">
+      <div class="grid grid-cols-4 max-w-7xl mx-auto mt-5 gap-3 bg-trasparent">
         <div class="bg-white/20 backdrop-blur-lg shadow-lg rounded-lg p-4">
           <div class="main-card flex justify-center flex-col items-center text-white text-center">
             <div class="img flex justify-center items-center">
@@ -59,7 +59,30 @@
       </div>
     </div>
 
+
+
+    <button id="showAlertBtn" class="px-4 py-2 bg-blue-500 text-white rounded">
+        Tampilkan Alert
+    </button>
     
+    <div id="alertBox" class="hidden mt-3 p-4 bg-red-500 text-white rounded">
+        Ini adalah alert!
+        <button id="closeAlertBtn" class="ml-4 text-white font-bold">&times;</button>
+    </div>
+    
+    <script>
+        document.getElementById("showAlertBtn").addEventListener("click", function() {
+            document.getElementById("alertBox").classList.remove("hidden");
+        });
+    
+        document.getElementById("closeAlertBtn").addEventListener("click", function() {
+            document.getElementById("alertBox").classList.add("hidden");
+        });
+    </script>
+    
+
+
+
     <!-- <div class="grid grid-rows-3 gap-4 border-2 border-black p-2">
         <div class="bg-red-200 p-4">Item 1</div>
         <div class="bg-red-300 p-4">Item 2</div>
